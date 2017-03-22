@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sam43.ledcontroller.MainActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Control the LED"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:id="@+id/textView2"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar"
+            android:max="255"
+            android:progress="1"
+            android:indeterminate="false"
+            android:layout_below="@+id/textView3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Brightness"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/textView3"
+            android:layout_marginTop="42dp"
+            android:layout_below="@+id/button3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ON"
+            android:layout_marginEnd="100dp"
+            android:layout_marginStart="100dp"
+            android:textColor="@color/white"
+            android:theme="@style/LedON"
+            android:id="@+id/button2"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/seekBar"
+            android:layout_alignEnd="@+id/seekBar" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OFF"
+            android:id="@+id/button3"
+            android:layout_marginStart="100dp"
+            android:textColor="@color/white"
+            android:theme="@style/LedOFF"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/button2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/button2"
+            android:layout_alignEnd="@+id/button2"
+            android:layout_marginLeft="100dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/Disconnect"
+            android:text="Disconnect"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/ic_do_not_disturb_black_24dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:id="@+id/button4"
+            android:layout_below="@+id/seekBar"
+            android:layout_alignRight="@+id/button2"
+            android:layout_alignEnd="@+id/button2"
+            android:layout_marginRight="26dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginTop="84dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lumn"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_toEndOf="@+id/button4"
+            android:layout_marginLeft="6dp"
+            android:layout_marginStart="6dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/seekBar"
+            android:layout_toRightOf="@+id/button4" />
+</RelativeLayout>
